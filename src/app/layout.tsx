@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartModal } from "@/components/cart/CartModal";
-
+import Script from "next/script";
 const inter = Inter({
   subsets: ["latin", "vietnamese"],
   variable: "--font-sans",
@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
+      <head>
+      <Script src="https://t.contentsquare.net/uxa/0160c3b573035.js" strategy="afterInteractive" />
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-foreground`}
       >
